@@ -1,0 +1,58 @@
+void decToBCD(unsigned int decimalNum){
+  unsigned int dig1;
+  unsigned int dig2;
+  
+  dig1=decimalNum/10;
+  dig2=decimalNum%10;
+  
+  SCI_OutString("   DIG1:");
+  SCI_OutUDec(dig1);
+  SCI_OutString("   DIG2:");
+  SCI_OutUDec(dig2);
+  
+  PT0AD=dig1;//Controls higher end (dig1)
+  /*if (dig1==0){
+    PT0AD=0x00; 
+  } else if (dig1==1){
+    PT0AD=0x01; 
+  } else if (dig1==2){
+    PT0AD=0x02; 
+  } else if (dig1==3){
+    PT0AD=0x03; 
+  } else if (dig1==4){
+    PT0AD=0x04; 
+  } else if (dig1==5){
+    PT0AD=0x05; 
+  } else if (dig1==6){
+    PT0AD=0x06; 
+  } else if (dig1==7){
+    PT0AD=0x07; 
+  } else if (dig1==8){
+    PT0AD=0x08; 
+  } else {
+    PT0AD=0x09; 
+  }*/
+  
+  PT1AD=dig2;//Controls lower end (dig2) 
+  /*if (dig2==0){
+    PT1AD=0x00; 
+  } else if (dig2==1){
+    PT1AD=0x01; 
+  } else if (dig2==2){
+    PT1AD=0x02; 
+  } else if (dig2==3){
+    PT1AD=0x03; 
+  } else if (dig2==4){
+    PT1AD=0x04; 
+  } else if (dig2==5){
+    PT1AD=0x05; 
+  } else if (dig2==6){
+    PT1AD=0x06; 
+  } else if (dig2==7){
+    PT1AD=0x07; 
+  } else if (dig2==8){
+    PT1AD=0x08; 
+  } else {
+    PT1AD=0x09; 
+  }*/
+}
